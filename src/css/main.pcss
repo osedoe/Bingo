@@ -1,19 +1,28 @@
+/* GENERAL STYLES */
 body {
+	background: darkcyan;
 	text-align: center;
+}
 
-	& header {
-		& h1 {
-			background: lightcoral;
-			padding: 0.5em;
-		}
+header {
+	& h1 {
+		background: lightcoral;
+		padding: 0.5em;
 	}
 }
 
+h2 {
+	color: white;
+}
+
+/* MAIN */
 .container {
+	margin: auto;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	margin-top: 10vh;
 
 	& > div {
 		border: 2px solid lightcoral;
@@ -22,24 +31,73 @@ body {
 
 	& .player,
 	& .cpu {
+		background: lightcoral;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		height: 300px;
-		/* width: 500px; */
+		padding: 1em;
+		margin: 1em;
+		width: 500px;
 
 		& .board {
-			border: 2px solid black;
-			height: 200px;
-			width: 340px;
+			display: flex;
+			flex-flow: row wrap;
+			flex-grow: 1;
+			flex-basis: 0;
+			justify-content: center;
+			height: 400px;
+			width: 400px;
 		}
 	}
 
-	.screen-container {
-		border: 2px solid black;
-		border-radius: 5px;
-		height: 100px;
-		width: 100px;
+	& .bingo {
+		background: white;
+
+		& .main-number {
+			background: lightcoral;
+			box-shadow: 0 0 6px black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100px;
+			width: 100px;
+
+			& #screen {
+				color: white;
+				font-size: 3.4em;
+				text-shadow: 0 0 4px black;
+				padding: 0;
+			}
+		}
+
+		& button {
+			border: 0;
+			background-color: lightcoral;
+			box-shadow: 2px 2px 2px black;
+			color: white;
+			font-size: 1.4em;
+			margin: 0.5em;
+		}
+
+		& button :focus {
+			box-shadow: none;
+		}
 	}
+}
+
+.number {
+	background: white;
+	box-shadow: 0 0 6px black;
+	color: coral;
+	font-size: 3.4em;
+	padding: 0.2em;
+	margin: 0.1em;
+	text-shadow: 1px 1px 2px black;
+	width: 60px;
+}
+
+.crossed {
+	color: gray;
+	text-decoration: line-through;
 }

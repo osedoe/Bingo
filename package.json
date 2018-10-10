@@ -9,7 +9,7 @@
     "postcss-preset-env": "^6.0.10",
     "stylelint": "^9.6.0"
   },
-  "name": "Bingo",
+  "name": "bingo",
   "description": "Template to jump-start a project with Parcel.",
   "version": "1.0.0",
   "main": "index.js",
