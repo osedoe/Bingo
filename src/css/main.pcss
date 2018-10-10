@@ -1,4 +1,45 @@
-@import './0-vendor/_0-vendor';
-@import './1-base/_1_base';
-@import './2-layout/_2-layout';
-@import './3-components/_3-components';
+body {
+	text-align: center;
+
+	& header {
+		& h1 {
+			background: lightcoral;
+			padding: 0.5em;
+		}
+	}
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	& > div {
+		border: 2px solid lightcoral;
+		padding: 1em;
+	}
+
+	& .player,
+	& .cpu {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 300px;
+		/* width: 500px; */
+
+		& .board {
+			border: 2px solid black;
+			height: 200px;
+			width: 340px;
+		}
+	}
+
+	.screen-container {
+		border: 2px solid black;
+		border-radius: 5px;
+		height: 100px;
+		width: 100px;
+	}
+}

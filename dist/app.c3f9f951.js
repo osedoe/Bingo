@@ -105,8 +105,30 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   // Override the current require with this new one
   return newRequire;
 })({"js/app.js":[function(require,module,exports) {
+var player = document.querySelector('.player');
+var cpu = document.querySelector('.cpu');
 
-},{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var createCard = function createCard(classDiv) {
+  // Declare all necessary variables
+  var parent = document.querySelectorAll(classDiv); // Create an array of 15 numbers
+
+  var allNumbers = _.range(1, 91);
+
+  var randomNumbers = _.shuffle(allNumbers);
+
+  var boardNumbers = randomNumbers.slice(0, 15); // returns an array of 15 random numbers
+  // We are going to iterate over the {array}boardNumbers and create each element in the html
+
+  boardNumbers.forEach(function (element) {
+    var div = document.createElement('div');
+    div.className = "number number".concat(element);
+    div.textContent = element;
+    parent.appendChild(div);
+  });
+};
+
+createCard('.player-board');
+},{}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -133,7 +155,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55707" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53154" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
@@ -275,4 +297,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/app.js"], null)
+},{}]},{},["../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/app.js"], null)
+//# sourceMappingURL=/app.c3f9f951.map
