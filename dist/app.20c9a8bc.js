@@ -16,4 +16,4 @@ var n,t=arguments[3],r=require("buffer").Buffer;(function(){var r,e=200,u="Unsup
 },{"buffer":"3C0V"}],"QdeU":[function(require,module,exports) {
 var e=require("lodash"),n=document.querySelector(".player"),r=document.querySelector(".cpu"),t=document.querySelector("#roll"),c=document.querySelector("#screen"),o=e.shuffle(e.range(1,91)),u=[],l=[],a=function(){var n=e.range(1,91);return e.shuffle(n).slice(0,15)},d=function(){return o.pop()},i=function(e){var n=document.querySelector(e),r=a();return r.forEach(function(e){var r=document.createElement("div");r.className="number number".concat(e),r.textContent=e,n.appendChild(r)}),r},s=function(n){for(var r=".number".concat(n),t=document.querySelectorAll(r),c=0;c<t.length;c++)t[c].classList.add("crossed");e.pull(u,n),e.pull(l,n)},f=function(){0==u.length&&0==l.length?alert("Draw!"):0==u.length?alert("You win!"):0==l.length&&alert("You lose!")};t.addEventListener("click",function(){var e=d();c.textContent=e,s(e),f()}),u=i(".player-board"),l=i(".cpu-board");
 },{"lodash":"B1iE"}]},{},["QdeU"], null)
-//# sourceMappingURL=/bingo/app.20c9a8bc.map
+//# sourceMappingURL=/app.20c9a8bc.map
