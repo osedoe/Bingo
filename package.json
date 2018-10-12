@@ -31,9 +31,5 @@
     "parcel"
   ],
   "author": "Jose Diaz",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/osedoe/Bingo/issues"
-  },
-  "homepage": "https://github.com/osedoe/Bingo#readme"
+  "license": "ISC"
 }
