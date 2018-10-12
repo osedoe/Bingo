@@ -1,21 +1,9 @@
-# template-start
+# Bingo game
 
-Template to jump-start a project with Parcel.
+## Introduction
 
-## Run
+Game created for the EOI Bootcamp, with the aim of practising our JavaScript skills.
 
-```terminal
-# To start to watch the project and start the live server
-parcel serve src/index.html --open
-```
+We were told to use Lodash plus the technologies we wanted, so I chose to go with PostCSS and Parcel.
 
-```terminal
-# Create the build project in dist/
-parcel build src/index.html --detailed-report
-```
-
-## Dependencies
-
-- PostCSS
-- Browserlist
-- Stylelint
+The user should be able to click on a button to generate random numbers that it will be checked against two boards.
